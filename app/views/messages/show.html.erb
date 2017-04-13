@@ -11,8 +11,11 @@ ago
 <%= render 'comments/form' %>
 
 <%= link_to "Back", root_path, class: "btn btn-default" %>
-<% if @message.user_id == current_user.id  %>
-    <%= link_to "Edit", edit_message_path(@message),  class: "btn btn-default" %>
-    <%= link_to "Delete" , message_path(@message), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" }%>
+
+<% if user_signed_in? %>
+    <% if @message.user_id == current_user.id  %>
+        <%= link_to "Edit", edit_message_path(@message),  class: "btn btn-default" %>
+        <%= link_to "Delete" , message_path(@message), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" }%>
+    <% end %>
 <% end %>
 <!-- add a posted at timestamp -->
