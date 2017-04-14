@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MessageBoard</title>
+    <title>MonkeyBoard</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -30,10 +30,12 @@
             <% end %>
         </div>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+
 
     <div class="container">
+        <p class="notice" style="text-align: center;"><%= notice %></p>
+        <p class="alert" style="text-align: center;"><%= alert %></p>
     <%= yield %>
     </div>
   </body>
