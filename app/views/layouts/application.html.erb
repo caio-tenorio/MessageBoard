@@ -19,6 +19,8 @@
             <li> <%= link_to "Sign up", new_user_registration_path %>            </li>
             <% if user_signed_in?  %>
                 <li><%= link_to "Sign out", destroy_user_session_path, method: :delete  %></li>
+                <li><%= link_to "Logged as "+current_user.email, edit_user_registration_path(@user) %></li>
+
             <% else %>
                 <li><%= link_to "Sign in", new_user_session_path %></li>
             <% end %>
@@ -28,10 +30,12 @@
             <% end %>
         </div>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+
 
     <div class="container">
+        <p class="notice" style="text-align: center;"><%= notice %></p>
+        <p class="alert" style="text-align: center;"><%= alert %></p>
     <%= yield %>
     </div>
   </body>
