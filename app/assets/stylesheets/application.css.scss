@@ -88,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.4em 1.4em;
     height: 150px;
     border-bottom: 4px solid #0a8fd5;
+    box-shadow: 2px 5px 5px grey;
 
     .message-title {
         font-size: 1.5em;
@@ -118,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     font-family: 'Muli', sans-serif;
     font-weight: 300;
+    box-shadow: 2px 5px 5px grey;
 
     h2 {
         margin-top: 0;
